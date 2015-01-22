@@ -393,6 +393,7 @@ a {
 header {
     width: 100%;
     height: 50px;
+    background: @color-white;
     border-bottom: 1px solid @color-yellow;
 
     .pointer-up {
@@ -434,6 +435,15 @@ header {
     }
 }
 
+.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
+    z-index: 10;
+}
+
 .title {
     font-family: RobotoBlack;
     color: @color-red;
@@ -442,7 +452,7 @@ header {
     &--main {
         font-size: 48px;
         text-align: center;
-        padding-top: 45px;
+        // padding-top: 45px;
     }
 
     &--item {
@@ -491,7 +501,7 @@ header {
 
 .schedule {
     background: @color-gray-light;
-    padding-bottom: 110px;
+    padding-top: 50px;
 
     &__wrap {
         width: 570px;
@@ -583,7 +593,7 @@ header {
 
 .gallery {
     background: @color-gray-light;
-    padding-bottom: 110px;
+    padding-top: 100px;
 
     &__item {
         width: 270px;
@@ -636,5 +646,65 @@ header {
         float: right;
         margin-left: 10px;
     }
+
+    &__slider {
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+    }
 }
+
+.debounce.schedule {
+    margin-top: 50px;
+}
+
+.showed.modal-overlay {
+    display: block;
+}
+
+// .modal-overlay {
+//     display: none;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0, 0, 0, 1);
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: 10;
+// }
+
+.flex-viewport {
+    height: 600px;
+    margin: 0 auto;
+
+    li {
+        position: relative;
+
+        img {
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+}
+
+.flex-control-thumbs {
+    height: 22%;
+    border: 5px solid @color-yellow;
+    box-sizing: border-box;
+    margin: 0!important;
+
+    li {
+
+        img {
+            max-width: 100%;
+            min-width: 200px;
+        }
+    }
+}
+
+// .scrolldisable {
+//     overflow: hidden;
+// }
 
