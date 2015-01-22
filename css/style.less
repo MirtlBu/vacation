@@ -380,18 +380,20 @@ header {
     background: @color-white;
     border-bottom: 1px solid @color-yellow;
 
+    .grid {
+        display: table;
+
+        & > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
     .pointer-up {
-        vertical-align: top;
-        position: relative;
-        top: 16%;
         margin-right: 50px;
     }
 
     .nav {
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-        top: 20%;
 
         &__item {
             display: inline-block;
@@ -410,12 +412,6 @@ header {
                 }
             }
         }
-    }
-
-    button{
-        vertical-align: top;
-        position: relative;
-        top: 10%;
     }
 }
 
@@ -488,13 +484,17 @@ header {
     padding-top: 50px;
 
     &__wrap {
-        width: 570px;
+        width: 48%;
         overflow: hidden;
         border-radius: 30px;
         display: inline-block;
 
         &:first-child {
-            margin-right: 25px;
+            margin-right: 40px;
+
+           .schedule__item {
+                background: @color-white url(../img/girls-1.jpg) -250px 0 no-repeat;
+            }
         }
     }
 
@@ -503,10 +503,7 @@ header {
         height: 420px;
         padding: 15px;
         box-sizing: border-box;
-        background: url(../img/girls.jpg);
-        background-color: @color-white;
-        background-position: -250px 0;
-        background-repeat: no-repeat;
+        background: @color-white url(../img/girls.jpg) -250px 0 no-repeat;
         position: relative;
         left: 0;
         -webkit-transition: all .3s linear;
