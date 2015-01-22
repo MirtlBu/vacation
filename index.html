@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link type="text/css" rel="stylesheet" href="css/fotorama.css" />
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <meta content="text/html; charset=utf-8; ru" http-equiv="Content-Type">
     <title>Каникулы</title>
@@ -8,7 +9,7 @@
 
 <body>
 
-    <div class="opening">
+    <div class="opening" id="opening">
         <div class="logo">
             <img src="img/logo.png">
         </div>
@@ -28,22 +29,22 @@
                 </div>
             </div>
         </div>
-        <div class="pointer pointer-down">
+        <a href="#header" class="pointer pointer-down">
             <span>Подробнее</span>
             <img src="img/pointer-down.png">
-        </div>
+        </a>
     </div>
-    <header>
+    <header id="header">
         <div class="grid">
-            <span class="pointer pointer-up">
+            <a href="#opening" class="pointer pointer-up">
                 <img src="img/pointer-up.png">
-            </span>
+            </a>
             <ul class="nav">
                 <li class="nav__item">
-                    <a href="">Программа каникул</a>
+                    <a href="#schedule">Программа каникул</a>
                 </li>
                 <li class="nav__item">
-                    <a href="">Фотогалерея</a>
+                    <a href="#gallery">Фотогалерея</a>
                 </li>
                 <li class="nav__item">
                     <a href="">Стоимость каникул</a>
@@ -59,7 +60,7 @@
             </button>
         </div>
     </header>
-    <div class="schedule">
+    <div class="schedule" id="schedule">
         <div class="grid">
             <div class="title title--main">Программа каникул</div>
             <div class="decor">
@@ -153,7 +154,7 @@
             </div>
         </div>
     </div>
-    <div class="gallery">
+    <div class="gallery" id="gallery">
         <div class="grid">
             <div class="title title--main">Фотогалерея каникул</div>
             <div class="decor">
@@ -219,10 +220,38 @@
             </div>
         </div>
     </div>
+    <div class="modal-overlay">
+        <div class="close">
+            <span>×</span>
+        </div>
+        <div class="fotorama"
+            data-nav="thumbs"
+            data-height="100%"
+            data-loop="true">
+              <a href="img/bg-1.jpg">
+                <img src="img/bg-1.jpg" />
+              </a>
+              <a href="img/girls.jpg">
+                <img src="img/girls.jpg" />
+              </a>
+              <a href="img/bg-1.jpg">
+                <img src="img/bg-1.jpg" />
+              </a>
+              <a href="img/girls.jpg">
+                <img src="img/girls.jpg" />
+              </a>
+              <a href="img/bg-1.jpg">
+                <img src="img/bg-1.jpg" />
+              </a>
+              <a href="img/girls.jpg">
+                <img src="img/girls.jpg" />
+              </a>
+        </div>
+    </div>
 
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-
+    <script src="js/fotorama.js"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

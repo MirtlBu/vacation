@@ -3,22 +3,6 @@
     src: url(../fonts/Roboto-Light.ttf);
 }
 @font-face {
-    font-family: 'RobotoRegular';
-    src: url(../fonts/Roboto-Regular.ttf);
-}
-@font-face {
-    font-family: 'RobotoMedium';
-    src: url(../fonts/Roboto-Medium.ttf);
-}
-@font-face {
-    font-family: 'RobotoThin';
-    src: url(../fonts/Roboto-Thin.ttf);
-}
-@font-face {
-    font-family: 'RobotoBold';
-    src: url(../fonts/Roboto-Bold.ttf);
-}
-@font-face {
     font-family: 'RobotoBlack';
     src: url(../fonts/Roboto-Black.ttf);
 }
@@ -335,7 +319,7 @@ a {
 }
 
 .background {
-    background-image: url(../img/bg-2.jpg);
+    background-image: url(../img/bg-1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -393,6 +377,7 @@ a {
 header {
     width: 100%;
     height: 50px;
+    background: @color-white;
     border-bottom: 1px solid @color-yellow;
 
     .pointer-up {
@@ -434,6 +419,15 @@ header {
     }
 }
 
+.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
+    z-index: 10;
+}
+
 .title {
     font-family: RobotoBlack;
     color: @color-red;
@@ -442,7 +436,7 @@ header {
     &--main {
         font-size: 48px;
         text-align: center;
-        padding-top: 45px;
+        // padding-top: 45px;
     }
 
     &--item {
@@ -491,7 +485,7 @@ header {
 
 .schedule {
     background: @color-gray-light;
-    padding-bottom: 110px;
+    padding-top: 50px;
 
     &__wrap {
         width: 570px;
@@ -583,7 +577,8 @@ header {
 
 .gallery {
     background: @color-gray-light;
-    padding-bottom: 110px;
+    padding-top: 100px;
+    position: relative;
 
     &__item {
         width: 270px;
@@ -636,5 +631,56 @@ header {
         float: right;
         margin-left: 10px;
     }
+
+    &__slider {
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+    }
 }
+
+.debounce.schedule {
+    margin-top: 50px;
+}
+
+.showed.modal-overlay {
+    display: block;
+}
+
+.modal-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    font-size: 26px;
+    font-family: RobotoBlack;
+    color: @color-white;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    text-align: center;
+    line-height: .4;
+    z-index: 100;
+    cursor: pointer;
+
+    span {
+        position: relative;
+        top: 0;
+    }
+}
+
+
+
 
