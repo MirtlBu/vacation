@@ -386,18 +386,33 @@ header {
         & > div {
             display: table-cell;
             vertical-align: middle;
+
+            &:nth-child(1) {
+                text-align: left;
+            }
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+
+            &:nth-child(3) {
+                text-align: right;
+            }
         }
     }
 
     .pointer-up {
-        margin-right: 50px;
+        // margin-right: 50px;
     }
 
     .nav {
 
         &__item {
             display: inline-block;
-            margin-right: 45px;
+
+            &:not(:last-child) {
+                margin-right: 45px;
+            }
 
             a {
                 font-size: 18px;
