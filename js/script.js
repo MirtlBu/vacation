@@ -33,18 +33,14 @@ $(function() {
       });
     });
 
-    $(window).load(function() {
-      $('.gallery__slider').flexslider({
-        animation: "slide",
-        controlNav: "thumbnails",
-        selector: 'ul > li',
-        slideshow: false
-      });
-    });
-
     $('.gallery').on('click', '.gallery__item', function() {
         $('.modal-overlay').addClass('showed');
         $('body').addClass('scrolldisable');
+    });
+
+    $('.modal-overlay').on('click', '.close', function() {
+        $('.modal-overlay').removeClass('showed');
+        $('body').removeClass('scrolldisable');
     })
 
 });
